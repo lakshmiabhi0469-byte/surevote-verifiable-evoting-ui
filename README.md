@@ -96,3 +96,6 @@ GitHub: https://github.com/lakshmiabhi0469-byte
 ---
 
 *SureVote – Exploring the Future of Verifiable Electronic Voting.*
+## Project Screenshot
+
+![SureVote Homepage](surevote-homepage.png)
