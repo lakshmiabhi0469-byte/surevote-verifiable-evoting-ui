@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#101f36">
+  <title>SureVote | Digital Election Portal</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="app-shell">
+
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" aria-label="SureVote home">
+        <span class="brand-mark">
+          <span></span><span></span><span></span>
+        </span>
+        <span>
+          <strong>surevote</strong>
+          <small>DIGITAL ELECTION PORTAL</small>
+        </span>
+      </a>
+
+      <div class="election-switch">
+        <span class="eyebrow">ACTIVE ELECTION</span>
+        <div class="election-name">
+          <span class="live-dot"></span>
+          <span>Student Council 2026</span>
+          <span class="chevron">⌄</span>
+        </div>
+        <small>East Point Campus · Bengaluru</small>
+      </div>
+
+      <nav class="nav-group" aria-label="Main navigation">
+        <span class="nav-label">WORKSPACE</span>
+
+        <button class="nav-link active" data-page="overview">
+          <span class="nav-icon">▦</span> Overview
+        </button>
+
+        <button class="nav-link" data-page="vote">
+          <span class="nav-icon">◉</span> Cast your vote
+          <span class="nav-tag">OPEN</span>
+        </button>
+
+        <button class="nav-link" data-page="candidates">
+          <span class="nav-icon">♙</span> Candidates
+        </button>
+
+        <button class="nav-link" data-page="receipt">
+          <span class="nav-icon">▤</span> My vote receipt
+        </button>
+
+        <button class="nav-link" data-page="verify">
+          <span class="nav-icon">✓</span> Verify vote
+        </button>
+      </nav>
+
+      <nav class="nav-group secondary" aria-label="Information">
+        <span class="nav-label">INFORMATION</span>
+
+        <button class="nav-link" data-page="guidelines">
+          <span class="nav-icon">ⓘ</span> Voting guidelines
+        </button>
+
+        <button class="nav-link" data-page="help">
+          <span class="nav-icon">？</span> Help & support
+        </button>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="secure-card">
+          <div class="secure-icon">♧</div>
+          <strong>Your choice is private.</strong>
+          <p>Your selection is not displayed on your public profile.</p>
+          <span><i></i> DEMO SECURITY STATUS</span>
+        </div>
+
+        <button class="profile-mini" id="profileButton">
+          <span class="avatar">V</span>
+          <span>
+            <strong>Voter</strong>
+            <small>Student · SV2026-0148</small>
+          </span>
+          <span class="more">···</span>
+        </button>
+      </div>
+    </aside>
+
+    <main class="main-area">
+
+      <header class="topbar">
+        <div class="top-left">
+          <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+          <div class="breadcrumb">
+            Portal <span>/</span>
+            <strong id="crumb">Overview</strong>
+          </div>
+        </div>
+
+        <div class="top-actions">
+          <span class="system-status"><i></i> All systems operational</span>
+          <button class="icon-button" title="Notifications">♧<b></b></button>
+          <div class="top-avatar">V</div>
+        </div>
+      </header>
+
+      <section class="page active" id="page-overview">
+
+        <div class="welcome-row">
+          <div>
+            <div class="date-line" id="todayDate">TUESDAY, 17 NOVEMBER 2026</div>
+            <h1>Welcome, Voter<span class="accent">.</span></h1>
+            <p class="subheading">
+              Your voice matters. Make it count in the Student Council Election 2026.
+            </p>
+          </div>
+
+          <div class="header-actions">
+            <span class="status-pill"><i></i> Voting is open</span>
+            <button class="btn btn-primary" data-go="vote">
+              Proceed to vote <span>→</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="hero-panel">
+          <div class="hero-content">
+            <span class="hero-kicker">STUDENT COUNCIL ELECTION · 2026</span>
+            <h2>One campus.<br><em>Many voices.</em> One choice.</h2>
+            <p>
+              Participate in shaping the next chapter of campus life.
+              Review the candidates, understand their priorities, and cast your vote securely.
+            </p>
+            <button class="btn btn-light" data-go="vote">
+              Cast your vote <span>↗</span>
+            </button>
+          </div>
+
+          <div class="hero-art" aria-hidden="true">
+            <div class="orbit orbit-one"></div>
+            <div class="orbit orbit-two"></div>
+
+            <div class="vote-card">
+              <div class="vote-card-top">
+                <span>OFFICIAL BALLOT</span>
+                <span>SV · 2026</span>
+              </div>
+
+              <div class="ballot-line"></div>
+              <div class="ballot-line short"></div>
+
+              <div class="ballot-choice">
+                <span class="check">✓</span><span></span>
+              </div>
+
+              <div class="ballot-choice">
+                <span></span><span></span>
+              </div>
+
+              <div class="ballot-choice">
+                <span></span><span></span>
+              </div>
+
+              <div class="ballot-seal">SV</div>
+            </div>
+
+            <div class="art-caption">YOUR VOTE. YOUR VOICE.</div>
+          </div>
+
+          <div class="hero-watermark">SV</div>
+        </div>
+
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">YOUR ELECTION SNAPSHOT</span>
+            <h2>At a glance</h2>
+          </div>
+          <span class="muted small">Live portal overview · Demo data</span>
+        </div>
+
+        <div class="stats-grid">
+          <article class="stat-card">
+            <div class="stat-top">
+              <span>Election status</span>
+              <span class="stat-icon mint">◷</span>
+            </div>
+            <strong class="stat-value">Open</strong>
+            <span class="stat-foot"><i class="green-dot"></i> Voting window is active</span>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-top">
+              <span>Eligible voters</span>
+              <span class="stat-icon blue">♙</span>
+            </div>
+            <strong class="stat-value">1,248</strong>
+            <span class="stat-foot">Registered student electorate</span>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-top">
+              <span>Positions</span>
+              <span class="stat-icon violet">▤</span>
+            </div>
+            <strong class="stat-value">04</strong>
+            <span class="stat-foot">Leadership roles on the ballot</span>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-top">
+              <span>Your participation</span>
+              <span class="stat-icon gold">✓</span>
+            </div>
+            <strong class="stat-value" id="participationStat">Pending</strong>
+            <span class="stat-foot" id="participationFoot">
+              Your vote has not been submitted
+            </span>
+          </article>
+        </div>
+
+        <div class="content-grid">
+          <article class="panel election-panel">
+            <div class="panel-heading">
+              <div>
+                <span class="eyebrow">IMPORTANT DATES</span>
+                <h3>Election timeline</h3>
+              </div>
+              <span class="subtle-tag">2026</span>
+            </div>
+
+            <div class="timeline">
+              <div class="timeline-item done">
+                <span class="timeline-marker">✓</span>
+                <div>
+                  <strong>Candidate nominations</strong>
+                  <small>02 – 06 November 2026</small>
+                </div>
+                <span class="timeline-state">COMPLETED</span>
+              </div>
+
+              <div class="timeline-item done">
+                <span class="timeline-marker">✓</span>
+                <div>
+                  <strong>Campaign period</strong>
+                  <small>07 – 13 November 2026</small>
+                </div>
+                <span class="timeline-state">COMPLETED</span>
+              </div>
+
+              <div class="timeline-item current">
+                <span class="timeline-marker"></span>
+                <div>
+                  <strong>Online voting</strong>
+                  <small>14 – 20 November 2026</small>
+                </div>
+                <span class="timeline-state current-text">IN PROGRESS</span>
+              </div>
+
+              <div class="timeline-item">
+                <span class="timeline-marker"></span>
+                <div>
+                  <strong>Result announcement</strong>
+                  <small>23 November 2026</small>
+                </div>
+                <span class="timeline-state">UPCOMING</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="panel quick-panel">
+            <div class="panel-heading">
+              <div>
+                <span class="eyebrow">GET STARTED</span>
+                <h3>Quick actions</h3>
+              </div>
+            </div>
+
+            <button class="quick-action" data-go="candidates">
+              <span class="quick-icon">♙</span>
+              <span>
+                <strong>Explore candidates</strong>
+                <small>Review profiles and manifestos</small>
+              </span>
+              <b>→</b>
+            </button>
+
+            <button class="quick-action" data-go="vote">
+              <span class="quick-icon">◉</span>
+              <span>
+                <strong>Cast your vote</strong>
+                <small>Complete your digital ballot</small>
+              </span>
+              <b>→</b>
+            </button>
+
+            <button class="quick-action" data-go="guidelines">
+              <span class="quick-icon">ⓘ</span>
+              <span>
+                <strong>Read voting guidelines</strong>
+                <small>Know the process before you begin</small>
+              </span>
+              <b>→</b>
+            </button>
+          </article>
+        </div>
+
+        <div class="notice-strip">
+          <span class="notice-icon">i</span>
+          <p>
+            <strong>Before you vote:</strong>
+            You can submit one ballot in this demonstration.
+            Review your selections carefully before confirming.
+          </p>
+          <button data-go="guidelines">Read guidelines →</button>
+        </div>
+      </section>
+
+      <section class="page" id="page-candidates">
+        <div class="page-heading">
+          <div>
+            <span class="eyebrow">MEET THE REPRESENTATIVES</span>
+            <h1>Candidate directory</h1>
+            <p class="subheading">
+              Learn about the students standing for election and the ideas they want to bring to campus.
+            </p>
+          </div>
+          <span class="status-pill"><i></i> 4 candidates listed</span>
+        </div>
+
+        <div class="filter-row">
+          <div class="search-box">
+            <span>⌕</span>
+            <input id="candidateSearch" placeholder="Search by name or position..." aria-label="Search candidates">
+          </div>
+          <span class="muted small">Illustrative profiles for project demonstration</span>
+        </div>
+
+        <div class="candidate-grid" id="candidateGrid"></div>
+      </section>
+
+      <section class="page" id="page-vote">
+        <div class="page-heading">
+          <div>
+            <span class="eyebrow">OFFICIAL DIGITAL BALLOT</span>
+            <h1>Cast your vote</h1>
+            <p class="subheading">
+              Follow the steps below to complete your participation in the election.
+            </p>
+          </div>
+          <span class="status-pill"><i></i> Ballot open</span>
+        </div>
+
+        <div class="vote-layout">
+          <div class="vote-main panel">
+            <div class="stepper">
+              <div class="step active" id="step1">
+                <span>01</span><small>Review</small>
+              </div>
+              <i></i>
+              <div class="step" id="step2">
+                <span>02</span><small>Select</small>
+              </div>
+              <i></i>
+              <div class="step" id="step3">
+                <span>03</span><small>Confirm</small>
+              </div>
+              <i></i>
+              <div class="step" id="step4">
+                <span>04</span><small>Receipt</small>
+              </div>
+            </div>
+
+            <div id="voteStepContent"></div>
+          </div>
+
+          <aside class="panel ballot-aside">
+            <span class="eyebrow">BALLOT INFORMATION</span>
+            <h3>Student Council<br>Election 2026</h3>
+            <div class="aside-rule"></div>
+
+            <div class="aside-detail">
+              <small>VOTING PERIOD</small>
+              <strong>14 Nov – 20 Nov 2026</strong>
+            </div>
+
+            <div class="aside-detail">
+              <small>VOTER ID</small>
+              <strong>SV2026-0148</strong>
+            </div>
+
+            <div class="aside-detail">
+              <small>BALLOT TYPE</small>
+              <strong>Single-choice demonstration</strong>
+            </div>
+
+            <div class="privacy-note">
+              <span>♧</span>
+              <div>
+                <strong>Private by design</strong>
+                <p>Your selected candidate is not shown on the public dashboard.</p>
+              </div>
+            </div>
+
+            <p class="disclaimer">
+              This is an academic front-end prototype. It does not submit a legally valid vote.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="page" id="page-receipt">
+        <div class="page-heading">
+          <div>
+            <span class="eyebrow">YOUR PARTICIPATION RECORD</span>
+            <h1>My vote receipt</h1>
+            <p class="subheading">
+              A reference confirming that you completed the demonstration ballot.
+            </p>
+          </div>
+        </div>
+
+        <div id="receiptContent" class="receipt-wrap"></div>
+      </section>
+
+      <section class="page" id="page-verify">
+        <div class="page-heading">
+          <div>
+            <span class="eyebrow">TRANSPARENCY & ACCOUNTABILITY</span>
+            <h1>Verify a vote</h1>
+            <p class="subheading">
+              Check whether a demonstration receipt reference exists in this browser session.
+            </p>
+          </div>
+        </div>
+
+        <div class="verify-layout">
+          <article class="panel verify-panel">
+            <div class="verify-symbol">✓</div>
+            <h2>Verification centre</h2>
+            <p>Enter the receipt reference generated after submitting your demo ballot.</p>
+
+            <form id="verifyForm">
+              <label for="verifyCode">RECEIPT REFERENCE</label>
+
+              <div class="verify-input">
+                <input id="verifyCode" placeholder="e.g. SV-2026-8F31A2" required>
+                <button class="btn btn-primary" type="submit">
+                  Verify reference →
+                </button>
+              </div>
+            </form>
+
+            <div id="verifyResult" aria-live="polite"></div>
+          </article>
+
+          <aside class="panel verify-info">
+            <span class="eyebrow">HOW IT WORKS</span>
+            <h3>Simple. Traceable. Clear.</h3>
+
+            <div class="info-step">
+              <b>01</b>
+              <p>
+                <strong>Submit your ballot</strong>
+                <small>Complete the review and confirmation steps.</small>
+              </p>
+            </div>
+
+            <div class="info-step">
+              <b>02</b>
+              <p>
+                <strong>Receive a reference</strong>
+                <small>A demo receipt code is generated in your browser.</small>
+              </p>
+            </div>
+
+            <div class="info-step">
+              <b>03</b>
+              <p>
+                <strong>Check the reference</strong>
+                <small>Use the code here to check the current session record.</small>
+              </p>
+            </div>
+
+            <p class="disclaimer">
+              This is not cryptographic or independent election verification.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="page" id="page-guidelines">
+        <div class="page-heading">
+          <div>
+            <span class="eyebrow">VOTER INFORMATION</span>
+            <h1>Voting guidelines</h1>
+            <p class="subheading">
+              A clear process helps every participant make an informed choice.
+            </p>
+          </div>
+        </div>
+
+        <div class="guideline-grid">
+          <article class="panel guideline-card">
+            <span class="guide-number">01</span>
+            <h3>Before you begin</h3>
+            <p>
+              Review the candidate directory and read the manifestos.
+              Make sure you understand the position and responsibilities being contested.
+            </p>
+          </article>
+
+          <article class="panel guideline-card">
+            <span class="guide-number">02</span>
+            <h3>Make your selection</h3>
+            <p>
+              Choose the candidate you wish to support.
+              The demonstration ballot allows one selection at a time.
+            </p>
+          </article>
+
+          <article class="panel guideline-card">
+            <span class="guide-number">03</span>
+            <h3>Review carefully</h3>
+            <p>
+              Check your selection on the review screen.
+              Return to the selection step if you want to make a change before confirmation.
+            </p>
+          </article>
+
+          <article class="panel guideline-card">
+            <span class="guide-number">04</span>
+            <h3>Keep your receipt</h3>
+            <p>
+              After confirmation, note your receipt reference.
+              It can be entered in the verification centre during this browser session.
+            </p>
+          </article>
+        </div>
+
+        <div class="notice-strip">
+          <span class="notice-icon">!</span>
+          <p>
+            <strong>Academic prototype notice:</strong>
+            This interface demonstrates a voting workflow only.
+            It is not connected to a real election, student database, or election authority.
+          </p>
+        </div>
+      </section>
+
+      <section class="page" id="page-help">
+        <div class="page-heading">
+          <div>
+            <span class="eyebrow">WE ARE HERE TO HELP</span>
+            <h1>Help & support</h1>
+            <p class="subheading">
+              Common questions about using the SureVote demonstration portal.
+            </p>
+          </div>
+        </div>
+
+        <div class="faq-list">
+          <details class="panel" open>
+            <summary>Can I change my selection after submitting?</summary>
+            <p>
+              In this demo, the ballot is marked as submitted after confirmation.
+              Reset the browser's site data to restart the demonstration.
+            </p>
+          </details>
+
+          <details class="panel">
+            <summary>Is my vote connected to a real election?</summary>
+            <p>
+              No. This is a front-end academic project using sample candidate and voter information.
+              It does not send votes to a server.
+            </p>
+          </details>
+
+          <details class="panel">
+            <summary>What is the receipt reference used for?</summary>
+            <p>
+              It is a sample reference generated in your browser session.
+              You can use it on the Verify Vote page to demonstrate a basic lookup flow.
+            </p>
+          </details>
+
+          <details class="panel">
+            <summary>Who can I contact for project questions?</summary>
+            <p>
+              For a classroom demonstration, contact your project guide or the faculty member supervising the project.
+            </p>
+          </details>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <span>© 2026 SureVote · Academic UI/UX prototype</span>
+        <span>Designed for clarity, trust and accessibility <b>·</b> v1.0.0</span>
+      </footer>
+
+    </main>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
